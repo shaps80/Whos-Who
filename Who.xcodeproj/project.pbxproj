@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54178B7D17923D9D00456B16 /* SPXPerson+SPXAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 54178B7C17923D9D00456B16 /* SPXPerson+SPXAdditions.m */; };
+		544E8CA41792322D008FEFFC /* SPXUpdateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 544E8CA31792322D008FEFFC /* SPXUpdateManager.m */; };
+		545D29A51790E08400CD316C /* SPXCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 545D29A41790E08400CD316C /* SPXCoreDataTableViewController.m */; };
 		548A21291790AC9000970F8E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 548A21281790AC9000970F8E /* UIKit.framework */; };
 		548A212B1790AC9000970F8E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 548A212A1790AC9000970F8E /* Foundation.framework */; };
 		548A212D1790AC9000970F8E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 548A212C1790AC9000970F8E /* CoreGraphics.framework */; };
@@ -23,13 +26,10 @@
 		548A21541790AC9000970F8E /* WhoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 548A21531790AC9000970F8E /* WhoTests.m */; };
 		548A215E1790B04700970F8E /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 548A215D1790B04700970F8E /* iPhone.storyboard */; };
 		548A21611790BD1200970F8E /* SPXPeopleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 548A21601790BD1200970F8E /* SPXPeopleTableViewController.m */; };
-		548A21651790C7DD00970F8E /* SPXPeopleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 548A21641790C7DD00970F8E /* SPXPeopleCell.m */; };
-		548A21681790CFDF00970F8E /* caroline.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 548A21671790CFDF00970F8E /* caroline.jpg */; };
+		548A21651790C7DD00970F8E /* SPXPersonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 548A21641790C7DD00970F8E /* SPXPersonCell.m */; };
 		548A216D1790D33B00970F8E /* Who.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 548A216B1790D33B00970F8E /* Who.xcdatamodeld */; };
 		548A216F1790D3E200970F8E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 548A216E1790D3E200970F8E /* QuartzCore.framework */; };
 		548A21711790D46200970F8E /* Aller.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 548A21701790D46200970F8E /* Aller.ttf */; };
-		548A21741790D90400970F8E /* fave@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 548A21721790D90400970F8E /* fave@2x.png */; };
-		548A21751790D90400970F8E /* fave.png in Resources */ = {isa = PBXBuildFile; fileRef = 548A21731790D90400970F8E /* fave.png */; };
 		548A21781790D9EE00970F8E /* placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 548A21761790D9EE00970F8E /* placeholder@2x.png */; };
 		548A21791790D9EE00970F8E /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 548A21771790D9EE00970F8E /* placeholder.png */; };
 		548A217C1790DA1900970F8E /* SPXPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 548A217B1790DA1900970F8E /* SPXPerson.m */; };
@@ -37,6 +37,14 @@
 		548A21851790DB2500970F8E /* SPXFetchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 548A21801790DB2500970F8E /* SPXFetchRequest.m */; };
 		548A21871790DB2500970F8E /* SPXStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 548A21821790DB2500970F8E /* SPXStore.m */; };
 		548A21891790DB2500970F8E /* SPXStoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 548A21841790DB2500970F8E /* SPXStoreManager.m */; };
+		54BF265517935FBD00D8C39B /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 54BF265017935FBD00D8C39B /* TFHpple.m */; };
+		54BF265617935FBD00D8C39B /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 54BF265217935FBD00D8C39B /* TFHppleElement.m */; };
+		54BF265717935FBD00D8C39B /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 54BF265417935FBD00D8C39B /* XPathQuery.m */; };
+		54BF265B1793600C00D8C39B /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 54BF265A1793600C00D8C39B /* libxml2.2.dylib */; };
+		54DF952417924AF800799050 /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 54DF952217924AF800799050 /* refresh.png */; };
+		54DF952517924AF800799050 /* refresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54DF952317924AF800799050 /* refresh@2x.png */; };
+		54DF952817924B1F00799050 /* SPXLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54DF952717924B1F00799050 /* SPXLoadingViewController.m */; };
+		54FEC201179224A100338BE8 /* SPXImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FEC200179224A100338BE8 /* SPXImageCache.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +58,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		54178B7B17923D9D00456B16 /* SPXPerson+SPXAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SPXPerson+SPXAdditions.h"; sourceTree = "<group>"; };
+		54178B7C17923D9D00456B16 /* SPXPerson+SPXAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SPXPerson+SPXAdditions.m"; sourceTree = "<group>"; };
+		544E8CA21792322D008FEFFC /* SPXUpdateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXUpdateManager.h; sourceTree = "<group>"; };
+		544E8CA31792322D008FEFFC /* SPXUpdateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXUpdateManager.m; sourceTree = "<group>"; };
+		545D29A31790E08400CD316C /* SPXCoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXCoreDataTableViewController.h; sourceTree = "<group>"; };
+		545D29A41790E08400CD316C /* SPXCoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXCoreDataTableViewController.m; sourceTree = "<group>"; };
+		545D29A61790E0CA00CD316C /* SPXTableViewControllerDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXTableViewControllerDatasource.h; sourceTree = "<group>"; };
+		545D29A71790E23400CD316C /* SPXDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPXDefines.h; path = ../SPXDefines.h; sourceTree = "<group>"; };
 		548A21251790AC9000970F8E /* Who.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Who.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		548A21281790AC9000970F8E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		548A212A1790AC9000970F8E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -72,14 +88,11 @@
 		548A215D1790B04700970F8E /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPhone.storyboard; path = ../iPhone.storyboard; sourceTree = "<group>"; };
 		548A215F1790BD1200970F8E /* SPXPeopleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXPeopleTableViewController.h; sourceTree = "<group>"; };
 		548A21601790BD1200970F8E /* SPXPeopleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXPeopleTableViewController.m; sourceTree = "<group>"; };
-		548A21631790C7DD00970F8E /* SPXPeopleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXPeopleCell.h; sourceTree = "<group>"; };
-		548A21641790C7DD00970F8E /* SPXPeopleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXPeopleCell.m; sourceTree = "<group>"; };
-		548A21671790CFDF00970F8E /* caroline.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = caroline.jpg; sourceTree = "<group>"; };
+		548A21631790C7DD00970F8E /* SPXPersonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXPersonCell.h; sourceTree = "<group>"; };
+		548A21641790C7DD00970F8E /* SPXPersonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXPersonCell.m; sourceTree = "<group>"; };
 		548A216C1790D33B00970F8E /* Who.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Who.xcdatamodel; sourceTree = "<group>"; };
 		548A216E1790D3E200970F8E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		548A21701790D46200970F8E /* Aller.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Aller.ttf; sourceTree = "<group>"; };
-		548A21721790D90400970F8E /* fave@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fave@2x.png"; sourceTree = "<group>"; };
-		548A21731790D90400970F8E /* fave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fave.png; sourceTree = "<group>"; };
 		548A21761790D9EE00970F8E /* placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholder@2x.png"; sourceTree = "<group>"; };
 		548A21771790D9EE00970F8E /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		548A217A1790DA1900970F8E /* SPXPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXPerson.h; sourceTree = "<group>"; };
@@ -91,6 +104,19 @@
 		548A21821790DB2500970F8E /* SPXStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXStore.m; sourceTree = "<group>"; };
 		548A21831790DB2500970F8E /* SPXStoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXStoreManager.h; sourceTree = "<group>"; };
 		548A21841790DB2500970F8E /* SPXStoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXStoreManager.m; sourceTree = "<group>"; };
+		54BF264F17935FBD00D8C39B /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
+		54BF265017935FBD00D8C39B /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
+		54BF265117935FBD00D8C39B /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
+		54BF265217935FBD00D8C39B /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
+		54BF265317935FBD00D8C39B /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
+		54BF265417935FBD00D8C39B /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
+		54BF265A1793600C00D8C39B /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
+		54DF952217924AF800799050 /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
+		54DF952317924AF800799050 /* refresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "refresh@2x.png"; sourceTree = "<group>"; };
+		54DF952617924B1F00799050 /* SPXLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXLoadingViewController.h; sourceTree = "<group>"; };
+		54DF952717924B1F00799050 /* SPXLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXLoadingViewController.m; sourceTree = "<group>"; };
+		54FEC1FF179224A100338BE8 /* SPXImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPXImageCache.h; sourceTree = "<group>"; };
+		54FEC200179224A100338BE8 /* SPXImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPXImageCache.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54BF265B1793600C00D8C39B /* libxml2.2.dylib in Frameworks */,
 				548A217E1790DAD100970F8E /* CoreData.framework in Frameworks */,
 				548A216F1790D3E200970F8E /* QuartzCore.framework in Frameworks */,
 				548A21291790AC9000970F8E /* UIKit.framework in Frameworks */,
@@ -119,6 +146,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		544E8C9F17923206008FEFFC /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				548A21831790DB2500970F8E /* SPXStoreManager.h */,
+				548A21841790DB2500970F8E /* SPXStoreManager.m */,
+				548A21811790DB2500970F8E /* SPXStore.h */,
+				548A21821790DB2500970F8E /* SPXStore.m */,
+				548A217F1790DB2500970F8E /* SPXFetchRequest.h */,
+				548A21801790DB2500970F8E /* SPXFetchRequest.m */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		544E8CA017923210008FEFFC /* Caching */ = {
+			isa = PBXGroup;
+			children = (
+				54FEC1FF179224A100338BE8 /* SPXImageCache.h */,
+				54FEC200179224A100338BE8 /* SPXImageCache.m */,
+			);
+			name = Caching;
+			sourceTree = "<group>";
+		};
+		544E8CA117923218008FEFFC /* Updating */ = {
+			isa = PBXGroup;
+			children = (
+				544E8CA21792322D008FEFFC /* SPXUpdateManager.h */,
+				544E8CA31792322D008FEFFC /* SPXUpdateManager.m */,
+			);
+			name = Updating;
+			sourceTree = "<group>";
+		};
 		548A211C1790AC9000970F8E = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +203,7 @@
 		548A21271790AC9000970F8E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				54BF265A1793600C00D8C39B /* libxml2.2.dylib */,
 				548A217D1790DAD100970F8E /* CoreData.framework */,
 				548A216E1790D3E200970F8E /* QuartzCore.framework */,
 				548A21281790AC9000970F8E /* UIKit.framework */,
@@ -160,6 +219,7 @@
 			children = (
 				548A21371790AC9000970F8E /* SPXAppDelegate.h */,
 				548A21381790AC9000970F8E /* SPXAppDelegate.m */,
+				545D29A71790E23400CD316C /* SPXDefines.h */,
 				548A212F1790AC9000970F8E /* Supporting Files */,
 			);
 			path = Who;
@@ -202,10 +262,15 @@
 			isa = PBXGroup;
 			children = (
 				548A215D1790B04700970F8E /* iPhone.storyboard */,
+				545D29A61790E0CA00CD316C /* SPXTableViewControllerDatasource.h */,
+				545D29A31790E08400CD316C /* SPXCoreDataTableViewController.h */,
+				545D29A41790E08400CD316C /* SPXCoreDataTableViewController.m */,
 				548A215F1790BD1200970F8E /* SPXPeopleTableViewController.h */,
 				548A21601790BD1200970F8E /* SPXPeopleTableViewController.m */,
-				548A21631790C7DD00970F8E /* SPXPeopleCell.h */,
-				548A21641790C7DD00970F8E /* SPXPeopleCell.m */,
+				548A21631790C7DD00970F8E /* SPXPersonCell.h */,
+				548A21641790C7DD00970F8E /* SPXPersonCell.m */,
+				54DF952617924B1F00799050 /* SPXLoadingViewController.h */,
+				54DF952717924B1F00799050 /* SPXLoadingViewController.m */,
 			);
 			name = UI;
 			path = Who/UI;
@@ -214,12 +279,11 @@
 		548A21661790CFBB00970F8E /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				54DF952217924AF800799050 /* refresh.png */,
+				54DF952317924AF800799050 /* refresh@2x.png */,
 				548A21761790D9EE00970F8E /* placeholder@2x.png */,
 				548A21771790D9EE00970F8E /* placeholder.png */,
-				548A21721790D90400970F8E /* fave@2x.png */,
-				548A21731790D90400970F8E /* fave.png */,
 				548A21701790D46200970F8E /* Aller.ttf */,
-				548A21671790CFDF00970F8E /* caroline.jpg */,
 			);
 			name = Assets;
 			path = Who/Assets;
@@ -231,6 +295,8 @@
 				548A216B1790D33B00970F8E /* Who.xcdatamodeld */,
 				548A217A1790DA1900970F8E /* SPXPerson.h */,
 				548A217B1790DA1900970F8E /* SPXPerson.m */,
+				54178B7B17923D9D00456B16 /* SPXPerson+SPXAdditions.h */,
+				54178B7C17923D9D00456B16 /* SPXPerson+SPXAdditions.m */,
 			);
 			name = "Data Model";
 			path = Who/DataModel;
@@ -239,15 +305,26 @@
 		548A216A1790D30900970F8E /* Logic */ = {
 			isa = PBXGroup;
 			children = (
-				548A21831790DB2500970F8E /* SPXStoreManager.h */,
-				548A21841790DB2500970F8E /* SPXStoreManager.m */,
-				548A21811790DB2500970F8E /* SPXStore.h */,
-				548A21821790DB2500970F8E /* SPXStore.m */,
-				548A217F1790DB2500970F8E /* SPXFetchRequest.h */,
-				548A21801790DB2500970F8E /* SPXFetchRequest.m */,
+				54BF264E17935FA000D8C39B /* Hpple */,
+				544E8CA117923218008FEFFC /* Updating */,
+				544E8C9F17923206008FEFFC /* CoreData */,
+				544E8CA017923210008FEFFC /* Caching */,
 			);
 			name = Logic;
 			path = Who/Logic;
+			sourceTree = "<group>";
+		};
+		54BF264E17935FA000D8C39B /* Hpple */ = {
+			isa = PBXGroup;
+			children = (
+				54BF264F17935FBD00D8C39B /* TFHpple.h */,
+				54BF265017935FBD00D8C39B /* TFHpple.m */,
+				54BF265117935FBD00D8C39B /* TFHppleElement.h */,
+				54BF265217935FBD00D8C39B /* TFHppleElement.m */,
+				54BF265317935FBD00D8C39B /* XPathQuery.h */,
+				54BF265417935FBD00D8C39B /* XPathQuery.m */,
+			);
+			name = Hpple;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,12 +404,11 @@
 				548A213D1790AC9000970F8E /* Default@2x.png in Resources */,
 				548A213F1790AC9000970F8E /* Default-568h@2x.png in Resources */,
 				548A215E1790B04700970F8E /* iPhone.storyboard in Resources */,
-				548A21681790CFDF00970F8E /* caroline.jpg in Resources */,
 				548A21711790D46200970F8E /* Aller.ttf in Resources */,
-				548A21741790D90400970F8E /* fave@2x.png in Resources */,
-				548A21751790D90400970F8E /* fave.png in Resources */,
 				548A21781790D9EE00970F8E /* placeholder@2x.png in Resources */,
 				548A21791790D9EE00970F8E /* placeholder.png in Resources */,
+				54DF952417924AF800799050 /* refresh.png in Resources */,
+				54DF952517924AF800799050 /* refresh@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,12 +446,20 @@
 				548A21351790AC9000970F8E /* main.m in Sources */,
 				548A21391790AC9000970F8E /* SPXAppDelegate.m in Sources */,
 				548A21611790BD1200970F8E /* SPXPeopleTableViewController.m in Sources */,
-				548A21651790C7DD00970F8E /* SPXPeopleCell.m in Sources */,
+				548A21651790C7DD00970F8E /* SPXPersonCell.m in Sources */,
 				548A216D1790D33B00970F8E /* Who.xcdatamodeld in Sources */,
 				548A217C1790DA1900970F8E /* SPXPerson.m in Sources */,
 				548A21851790DB2500970F8E /* SPXFetchRequest.m in Sources */,
 				548A21871790DB2500970F8E /* SPXStore.m in Sources */,
 				548A21891790DB2500970F8E /* SPXStoreManager.m in Sources */,
+				545D29A51790E08400CD316C /* SPXCoreDataTableViewController.m in Sources */,
+				54FEC201179224A100338BE8 /* SPXImageCache.m in Sources */,
+				544E8CA41792322D008FEFFC /* SPXUpdateManager.m in Sources */,
+				54178B7D17923D9D00456B16 /* SPXPerson+SPXAdditions.m in Sources */,
+				54DF952817924B1F00799050 /* SPXLoadingViewController.m in Sources */,
+				54BF265517935FBD00D8C39B /* TFHpple.m in Sources */,
+				54BF265617935FBD00D8C39B /* TFHppleElement.m in Sources */,
+				54BF265717935FBD00D8C39B /* XPathQuery.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +562,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Who/Who-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2";
 				INFOPLIST_FILE = "Who/Who-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -489,6 +574,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Who/Who-Prefix.pch";
+				HEADER_SEARCH_PATHS = "${SDKROOT}/usr/include/libxml2";
 				INFOPLIST_FILE = "Who/Who-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -548,6 +634,7 @@
 				548A21591790AC9000970F8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		548A215A1790AC9000970F8E /* Build configuration list for PBXNativeTarget "WhoTests" */ = {
 			isa = XCConfigurationList;
@@ -556,6 +643,7 @@
 				548A215C1790AC9000970F8E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

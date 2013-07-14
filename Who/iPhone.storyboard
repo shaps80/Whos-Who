@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--People Table View Controller-->
+        <!--People Table View Controller - Who's Who?-->
         <scene sceneID="qJx-JY-fZt">
             <objects>
                 <tableViewController id="NE3-K1-jar" customClass="SPXPeopleTableViewController" sceneMemberID="viewController">
@@ -13,18 +13,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="cPl-WZ-x8n">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <color key="tintColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            <textInputTraits key="textInputTraits"/>
-                            <connections>
-                                <outlet property="delegate" destination="NE3-K1-jar" id="A6z-e9-5VM"/>
-                            </connections>
-                        </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="peopleCell" rowHeight="195" id="mmJ-FS-M4Y" customClass="SPXPeopleCell">
-                                <rect key="frame" x="0.0" y="66" width="320" height="195"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="personCell" rowHeight="195" id="mmJ-FS-M4Y" customClass="SPXPersonCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="195"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="194"/>
@@ -32,7 +23,7 @@
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="placeholder.png" translatesAutoresizingMaskIntoConstraints="NO" id="gkH-KD-4CV" userLabel="Profile Image">
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="44" id="yPq-vc-M37"/>
+                                                <constraint firstAttribute="width" constant="44" id="Bmn-hS-2x3"/>
                                                 <constraint firstAttribute="height" constant="44" type="user" id="yjX-99-Xvq"/>
                                             </constraints>
                                         </imageView>
@@ -50,7 +41,7 @@
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="highlightedColor" red="0.3921568627" green="0.38823529410000002" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="1000" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="b00-fc-Jbw" userLabel="Biography">
                                             <attributedString key="attributedText">
@@ -67,32 +58,24 @@
                                             </attributedString>
                                             <color key="highlightedColor" red="0.30588235294117649" green="0.30588235294117649" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="fave.png" translatesAutoresizingMaskIntoConstraints="NO" id="KcV-XU-r16" userLabel="Favourite">
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="22" type="user" id="ck4-6r-Hon"/>
-                                                <constraint firstAttribute="width" constant="22" id="deO-km-Omy"/>
-                                            </constraints>
-                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="b00-fc-Jbw" firstAttribute="trailing" secondItem="KcV-XU-r16" secondAttribute="trailing" type="default" id="25A-hL-CdD"/>
                                     <constraint firstItem="XNf-ro-khZ" firstAttribute="leading" secondItem="gkH-KD-4CV" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="CGH-CK-woH"/>
-                                    <constraint firstItem="KcV-XU-r16" firstAttribute="leading" secondItem="XNf-ro-khZ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="N8n-qu-ivw"/>
-                                    <constraint firstItem="b00-fc-Jbw" firstAttribute="centerX" secondItem="mmJ-FS-M4Y" secondAttribute="centerX" type="default" id="dNW-ya-T34"/>
-                                    <constraint firstItem="b00-fc-Jbw" firstAttribute="leading" secondItem="gkH-KD-4CV" secondAttribute="leading" type="default" id="dsn-3m-kbS"/>
+                                    <constraint firstItem="XNf-ro-khZ" firstAttribute="top" secondItem="mmJ-FS-M4Y" secondAttribute="top" constant="15" id="DqA-iJ-8fe"/>
+                                    <constraint firstItem="XNf-ro-khZ" firstAttribute="trailing" secondItem="9CI-f4-tUg" secondAttribute="trailing" type="default" id="TH7-Db-CIH"/>
+                                    <constraint firstItem="9CI-f4-tUg" firstAttribute="trailing" secondItem="b00-fc-Jbw" secondAttribute="trailing" type="default" id="ahb-Kp-NsM"/>
+                                    <constraint firstItem="b00-fc-Jbw" firstAttribute="centerX" secondItem="mmJ-FS-M4Y" secondAttribute="centerX" type="user" id="dNW-ya-T34"/>
+                                    <constraint firstItem="b00-fc-Jbw" firstAttribute="leading" secondItem="gkH-KD-4CV" secondAttribute="leading" type="user" id="dsn-3m-kbS"/>
                                     <constraint firstItem="gkH-KD-4CV" firstAttribute="top" secondItem="mmJ-FS-M4Y" secondAttribute="top" constant="13" type="user" id="fDD-FL-d5s"/>
                                     <constraint firstItem="9CI-f4-tUg" firstAttribute="leading" secondItem="gkH-KD-4CV" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="i6q-V9-IWa"/>
                                     <constraint firstItem="b00-fc-Jbw" firstAttribute="top" secondItem="gkH-KD-4CV" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="l4C-F9-tbK"/>
-                                    <constraint firstItem="KcV-XU-r16" firstAttribute="centerY" secondItem="gkH-KD-4CV" secondAttribute="centerY" type="default" id="mQw-GU-78m"/>
-                                    <constraint firstItem="XNf-ro-khZ" firstAttribute="top" secondItem="mmJ-FS-M4Y" secondAttribute="top" constant="15" id="oHC-c6-yaQ"/>
-                                    <constraint firstItem="KcV-XU-r16" firstAttribute="leading" secondItem="9CI-f4-tUg" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="qPZ-WE-5ed"/>
                                     <constraint firstItem="9CI-f4-tUg" firstAttribute="top" secondItem="mmJ-FS-M4Y" secondAttribute="top" constant="39" id="qRY-1o-ya1"/>
+                                    <constraint firstItem="gkH-KD-4CV" firstAttribute="leading" secondItem="mmJ-FS-M4Y" secondAttribute="leading" constant="10" type="user" id="sfk-no-m4j"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="bioLabel" destination="b00-fc-Jbw" id="iHN-xN-qMA"/>
-                                    <outlet property="favouriteImageView" destination="KcV-XU-r16" id="iv2-Yy-XY5"/>
                                     <outlet property="nameLabel" destination="XNf-ro-khZ" id="sOj-aG-9yU"/>
                                     <outlet property="profileImageView" destination="gkH-KD-4CV" id="qQm-Jr-eND"/>
                                     <outlet property="roleLabel" destination="9CI-f4-tUg" id="Pmh-bD-EsE"/>
@@ -100,37 +83,71 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" id="aFz-mF-aR3">
-                        <nil key="title"/>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="2mv-ld-QIQ">
-                            <rect key="frame" x="53" y="7" width="213" height="31"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <segments>
-                                <segment title="Everyone"/>
-                                <segment title="Favourites"/>
-                            </segments>
-                            <color key="tintColor" red="0.22352941330000001" green="0.61176472900000001" blue="0.81176471709999998" alpha="1" colorSpace="deviceRGB"/>
-                        </segmentedControl>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Who's Who?" id="aFz-mF-aR3"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="b7S-xk-ozU">
                         <autoresizingMask key="autoresizingMask"/>
                     </refreshControl>
-                    <connections>
-                        <outlet property="searchDisplayController" destination="42h-FR-BUQ" id="y0M-1y-cE1"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H2a-24-yDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="42h-FR-BUQ">
-                    <connections>
-                        <outlet property="delegate" destination="NE3-K1-jar" id="q9A-gk-fF9"/>
-                        <outlet property="searchBar" destination="cPl-WZ-x8n" id="MyD-jd-pn5"/>
-                        <outlet property="searchContentsController" destination="NE3-K1-jar" id="8Jp-fP-7NB"/>
-                        <outlet property="searchResultsDataSource" destination="NE3-K1-jar" id="1ur-wu-hj1"/>
-                        <outlet property="searchResultsDelegate" destination="NE3-K1-jar" id="m8c-yv-n2Y"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="312" y="-105"/>
+        </scene>
+        <!--Loading View Controller-->
+        <scene sceneID="uhD-Mj-ATR">
+            <objects>
+                <viewController storyboardIdentifier="loadingViewController" id="hGO-4e-iLh" customClass="SPXLoadingViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xWI-YS-v4g">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xt7-dt-v4D" userLabel="Refresh Button">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="xGJ-6i-Gft"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Button" image="refresh.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Downloading Updates..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8D-TB-jzz">
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="fdn-sD-Nri">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="I5W-Qp-H0s"/>
+                                    <constraint firstAttribute="width" constant="34" id="OIT-zm-x69"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0078431372549019607" green="0.57647058823529407" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xt7-dt-v4D" firstAttribute="leading" secondItem="fdn-sD-Nri" secondAttribute="leading" type="default" id="0Lg-Bt-QHY"/>
+                            <constraint firstAttribute="centerY" secondItem="Q8D-TB-jzz" secondAttribute="centerY" type="user" id="0pF-BH-dm0"/>
+                            <constraint firstItem="Xt7-dt-v4D" firstAttribute="top" secondItem="xWI-YS-v4g" secondAttribute="top" constant="228" id="CKu-yy-btZ"/>
+                            <constraint firstItem="Q8D-TB-jzz" firstAttribute="trailing" secondItem="xWI-YS-v4g" secondAttribute="trailing" type="default" id="K1d-rw-FdV"/>
+                            <constraint firstItem="Xt7-dt-v4D" firstAttribute="centerY" secondItem="fdn-sD-Nri" secondAttribute="centerY" type="default" id="Kjt-RY-L7j"/>
+                            <constraint firstAttribute="centerX" secondItem="Xt7-dt-v4D" secondAttribute="centerX" type="user" id="V7U-GQ-idh"/>
+                            <constraint firstItem="fdn-sD-Nri" firstAttribute="trailing" secondItem="Xt7-dt-v4D" secondAttribute="trailing" type="default" id="Za5-So-7Ho"/>
+                            <constraint firstItem="Q8D-TB-jzz" firstAttribute="leading" secondItem="xWI-YS-v4g" secondAttribute="leading" type="default" id="akS-Yc-Sux"/>
+                            <constraint firstAttribute="centerY" secondItem="Q8D-TB-jzz" secondAttribute="centerY" type="user" id="hEf-EP-Vay"/>
+                            <constraint firstItem="Q8D-TB-jzz" firstAttribute="top" secondItem="fdn-sD-Nri" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="jRN-P5-bDB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="fdn-sD-Nri" id="s6Q-ni-LDI"/>
+                        <outlet property="label" destination="Q8D-TB-jzz" id="bzS-VK-9pQ"/>
+                        <outlet property="refreshButton" destination="Xt7-dt-v4D" id="Nbw-Ik-eJS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wjo-Lh-7cU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="790" y="-105"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QaN-Yf-RM5">
@@ -151,25 +168,35 @@
         </scene>
     </scenes>
     <resources>
-        <image name="fave.png" width="48" height="42"/>
         <image name="placeholder.png" width="44" height="43"/>
+        <image name="refresh.png" width="30" height="26"/>
     </resources>
     <classes>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
-        <class className="SPXPeopleCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SPXPeopleCell.h"/>
+        <class className="SPXCoreDataTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SPXCoreDataTableViewController.h"/>
+        </class>
+        <class className="SPXLoadingViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SPXLoadingViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="activityIndicator" candidateClass="UIActivityIndicatorView"/>
+                <relationship kind="outlet" name="label" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="refreshButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="SPXPeopleTableViewController" superclassName="SPXCoreDataTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SPXPeopleTableViewController.h"/>
+        </class>
+        <class className="SPXPersonCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SPXPersonCell.h"/>
             <relationships>
                 <relationship kind="outlet" name="bioLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="favouriteImageView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="profileImageView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="roleLabel" candidateClass="UILabel"/>
             </relationships>
-        </class>
-        <class className="SPXPeopleTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SPXPeopleTableViewController.h"/>
         </class>
         <class className="UIRefreshControl" superclassName="UIControl">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UIRefreshControl.h"/>

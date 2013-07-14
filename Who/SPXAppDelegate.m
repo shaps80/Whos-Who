@@ -8,6 +8,8 @@
 
 #import "SPXAppDelegate.h"
 #import "SPXStoreManager.h"
+#import "SPXFetchRequest.h"
+#import "SPXUpdateManager.h"
 
 @implementation SPXAppDelegate
 
