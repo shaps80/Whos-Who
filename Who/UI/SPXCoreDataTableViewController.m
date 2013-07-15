@@ -374,7 +374,6 @@
 {
     UITableView *tableView = controller == self.fetchedResultsController ? self.tableView : self.searchDisplayController.searchResultsTableView;
     [tableView endUpdates];
-	[tableView selectRowAtIndexPath:[self.fetchedResultsController indexPathForObject:editingObject] animated:NO scrollPosition:UITableViewScrollPositionTop];
 }
 
 #pragma mark - Datasource

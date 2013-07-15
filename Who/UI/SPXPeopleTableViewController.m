@@ -49,16 +49,21 @@
 
     _currentIndex = -1;
 
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"iPhone" bundle:[NSBundle mainBundle]];
-    _loadingViewController = [storyboard instantiateViewControllerWithIdentifier:@"loadingViewController"];
-    [_loadingViewController setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
-
-    [self presentViewController:_loadingViewController animated:NO completion:nil];
     [self update];
 
     [_loadingViewController.refreshButton addTarget:self
                                              action:@selector(loadingViewControllerRefreshTapped:)
                                    forControlEvents:UIControlEventTouchUpInside];
+}
+
+-(void)presentLoadingViewController
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"iPhone" bundle:[NSBundle mainBundle]];
+    
+    _loadingViewController = [storyboard instantiateViewControllerWithIdentifier:@"loadingViewController"];
+    [_loadingViewController setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
+
+    [self presentViewController:_loadingViewController animated:NO completion:nil];
 }
 
 -(void)loadingViewControllerRefreshTapped:(id)sender
@@ -68,6 +73,9 @@
 
 -(void)update
 {
+    if (!self.fetchedResultsController.fetchedObjects.count)
+        [self presentLoadingViewController];
+    
     _loadingViewController.label.text = @"Downloading Updates...";
     [_loadingViewController start];
 
@@ -155,12 +163,9 @@
     cell.roleLabel.text = [person.role capitalizedString];
     [cell setBiographyText:person.biography];
 
-    UITableView * __weak tableView  = self.tableView;
-
     [[SPXImageCache sharedInstance] imageForPerson:person withCompletion:^(UIImage *image)
     {
-        if ([tableView.visibleCells containsObject:cell])
-            cell.profileImageView.image = image;
+        cell.profileImageView.image = image;
     }];
 }
 

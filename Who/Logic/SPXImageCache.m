@@ -71,7 +71,7 @@
         return;
     }
 
-    // if we still don't have it, let download the image asynchronously and
+    // if we still don't have it, let download the image asynchronously, save it and update the cache
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:person.imageRemotePath]];
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *error)
@@ -82,29 +82,26 @@
             return;
         }
 
+        NSURL *localDestination = [NSURL URLWithString:[person.imageRemotePath lastPathComponent]
+                                         relativeToURL:[self applicationCacheDirectoryURL]];
+        person.imageLocalPath = localDestination.path;
+
         UIImage *image = [[UIImage alloc] initWithData:data];
 
         if (image)
         {
-            NSError *error = nil;
-            NSURL *localDestination = [NSURL URLWithString:[person.imageRemotePath lastPathComponent]
-                                             relativeToURL:[self applicationCacheDirectoryURL]];
-
-            person.imageLocalPath = localDestination.path;
-
-            if (![person.managedObjectContext save:&error])
-                DLog(@"%@", error);
-
+            // write file to disk
             [data writeToURL:localDestination atomically:YES];
-            [self.imageCache setObject:image forKey:person];
+            
+            // add it to the memory cache
+            [_imageCache setObject:image forKey:person];
+
+            if (![person.managedObjectContext save:nil])
+                DLog(@"Couldn't save image to database");
         }
 
         if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(image);
-            });
-        }
+            completion(image);
     }];
 }
 
