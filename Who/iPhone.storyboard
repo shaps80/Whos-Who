@@ -100,43 +100,56 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xt7-dt-v4D" userLabel="Refresh Button">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Tc-Mb-G1f">
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="fdn-sD-Nri">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="34" id="OIT-zm-x69"/>
+                                        </constraints>
+                                    </activityIndicatorView>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xt7-dt-v4D" userLabel="Refresh Button">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" type="user" id="xGJ-6i-Gft"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Button" image="refresh.png">
+                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Downloading Updates..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8D-TB-jzz">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" type="user" id="d3H-Eg-MuT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="xGJ-6i-Gft"/>
+                                    <constraint firstItem="Xt7-dt-v4D" firstAttribute="centerY" secondItem="fdn-sD-Nri" secondAttribute="centerY" type="user" id="0aa-y0-Chm"/>
+                                    <constraint firstItem="Q8D-TB-jzz" firstAttribute="leading" secondItem="5Tc-Mb-G1f" secondAttribute="leading" type="default" id="3XQ-Y9-AYh"/>
+                                    <constraint firstItem="Xt7-dt-v4D" firstAttribute="top" secondItem="5Tc-Mb-G1f" secondAttribute="top" constant="20" symbolic="YES" type="default" id="Hlv-58-nQX"/>
+                                    <constraint firstAttribute="centerX" secondItem="Q8D-TB-jzz" secondAttribute="centerX" type="user" id="NWd-Li-KPQ"/>
+                                    <constraint firstItem="Xt7-dt-v4D" firstAttribute="leading" secondItem="fdn-sD-Nri" secondAttribute="leading" type="default" id="P5L-sW-TqX"/>
+                                    <constraint firstAttribute="bottom" secondItem="fdn-sD-Nri" secondAttribute="bottom" constant="62" type="user" id="TLQ-mc-LHM"/>
+                                    <constraint firstAttribute="centerX" secondItem="fdn-sD-Nri" secondAttribute="centerX" type="user" id="Uls-UG-PC6"/>
+                                    <constraint firstAttribute="centerX" secondItem="Xt7-dt-v4D" secondAttribute="centerX" type="user" id="WoR-ux-zFO"/>
+                                    <constraint firstAttribute="bottom" secondItem="Xt7-dt-v4D" secondAttribute="bottom" constant="55" type="user" id="Yqg-y3-KgB"/>
+                                    <constraint firstAttribute="centerX" secondItem="Xt7-dt-v4D" secondAttribute="centerX" type="user" id="Zrc-dt-dIl"/>
+                                    <constraint firstItem="Q8D-TB-jzz" firstAttribute="top" secondItem="Xt7-dt-v4D" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="uy5-Db-R1r"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Button" image="refresh.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Downloading Updates..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8D-TB-jzz">
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="fdn-sD-Nri">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="I5W-Qp-H0s"/>
-                                    <constraint firstAttribute="width" constant="34" id="OIT-zm-x69"/>
-                                </constraints>
-                            </activityIndicatorView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0078431372549019607" green="0.57647058823529407" blue="0.71764705882352942" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Xt7-dt-v4D" firstAttribute="leading" secondItem="fdn-sD-Nri" secondAttribute="leading" type="default" id="0Lg-Bt-QHY"/>
-                            <constraint firstAttribute="centerY" secondItem="Q8D-TB-jzz" secondAttribute="centerY" type="user" id="0pF-BH-dm0"/>
-                            <constraint firstItem="Xt7-dt-v4D" firstAttribute="top" secondItem="xWI-YS-v4g" secondAttribute="top" constant="228" id="CKu-yy-btZ"/>
-                            <constraint firstItem="Q8D-TB-jzz" firstAttribute="trailing" secondItem="xWI-YS-v4g" secondAttribute="trailing" type="default" id="K1d-rw-FdV"/>
-                            <constraint firstItem="Xt7-dt-v4D" firstAttribute="centerY" secondItem="fdn-sD-Nri" secondAttribute="centerY" type="default" id="Kjt-RY-L7j"/>
-                            <constraint firstAttribute="centerX" secondItem="Xt7-dt-v4D" secondAttribute="centerX" type="user" id="V7U-GQ-idh"/>
-                            <constraint firstItem="fdn-sD-Nri" firstAttribute="trailing" secondItem="Xt7-dt-v4D" secondAttribute="trailing" type="default" id="Za5-So-7Ho"/>
-                            <constraint firstItem="Q8D-TB-jzz" firstAttribute="leading" secondItem="xWI-YS-v4g" secondAttribute="leading" type="default" id="akS-Yc-Sux"/>
-                            <constraint firstAttribute="centerY" secondItem="Q8D-TB-jzz" secondAttribute="centerY" type="user" id="hEf-EP-Vay"/>
-                            <constraint firstItem="Q8D-TB-jzz" firstAttribute="top" secondItem="fdn-sD-Nri" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="jRN-P5-bDB"/>
+                            <constraint firstAttribute="centerX" secondItem="5Tc-Mb-G1f" secondAttribute="centerX" type="user" id="XC7-W4-Vcc"/>
+                            <constraint firstAttribute="centerY" secondItem="5Tc-Mb-G1f" secondAttribute="centerY" type="user" id="hjN-K4-yyU"/>
+                            <constraint firstItem="5Tc-Mb-G1f" firstAttribute="leading" secondItem="xWI-YS-v4g" secondAttribute="leading" type="default" id="lrp-dG-E3X"/>
                         </constraints>
                     </view>
                     <connections>
