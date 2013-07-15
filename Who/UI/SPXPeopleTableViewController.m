@@ -163,9 +163,13 @@
     cell.roleLabel.text = [person.role capitalizedString];
     [cell setBiographyText:person.biography];
 
+    UITableView * __weak weakTableView = self.tableView;
+    cell.profileImageView.image = [UIImage imageNamed:@"placeholder"];
+
     [[SPXImageCache sharedInstance] imageForPerson:person withCompletion:^(UIImage *image)
     {
-        cell.profileImageView.image = image;
+        if ([[weakTableView indexPathsForVisibleRows] containsObject:indexPath])
+            cell.profileImageView.image = image;
     }];
 }
 

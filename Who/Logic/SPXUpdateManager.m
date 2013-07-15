@@ -136,7 +136,6 @@
         NSString *identifier = [NSString stringWithFormat:@"%d", [imagePath hash]];
 
         NSMutableDictionary *attributes = [[NSMutableDictionary alloc] init];
-        
 
         [attributes setObject:trim(name) forKey:SPXPersonKeyName];
         [attributes setObject:trim(role) forKey:SPXPersonKeyRole];
