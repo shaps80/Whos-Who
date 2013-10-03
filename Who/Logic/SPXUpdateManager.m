@@ -28,7 +28,7 @@
 #import "SPXPerson+SPXAdditions.h"
 #import "TFHpple.h"
 
-#define SPXBaseURL                      @"http://theappbusiness.com/people"
+#define SPXBaseURL                      @"http://theappbusiness.com/our-team"
 
 #define trim(string)                    [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]
 
